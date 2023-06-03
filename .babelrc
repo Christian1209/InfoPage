@@ -1,0 +1,19 @@
+{
+    "presets": [
+        "next/babel",
+        "@emotion/babel-preset-css-prop"
+    ],
+    "plugins":[
+        [
+            "@emotion"
+        ],
+        [
+            "babel-plugin-styled-components",
+           {
+            "ssr": true
+           }
+         ]
+
+    ]
+
+}
