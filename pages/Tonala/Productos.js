@@ -4,11 +4,11 @@ import { PageLayout } from '../../components/layout/PageLayout'
 import { SidebarProductos } from '../../components/ui/SidebarProductos'
 import { ProductosGrid } from '../../components/ui/ProductosGrid'
 
-export default function NormandiaProductos(){
+export default function TonalaProductos(){
   return (
     <>
-        <Layout Sucursal = {'Normandia'}> 
-          <PageLayout/>
+        <Layout Sucursal = {'Tonala'}> 
+          <PageLayout />
           <div className='d-flex'>
             <SidebarProductos/>
             <ProductosGrid/>

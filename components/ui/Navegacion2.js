@@ -34,14 +34,15 @@ export const Navegacion2 = () => {
                       </li>
                       <li class="nav-item px-3">
                         <NavMenu>
-                          <Link class="nav-link " href={`/${sucursal}/QuienesSomos`}>QUIENES SOMOS</Link>
+                          <Link class="nav-link" href={`/${sucursal}/BolsaDeTrabajo`}>BOLSA DE TRABAJO</Link>
                         </NavMenu>
                       </li>
                       <li class="nav-item px-3">
                         <NavMenu>
-                          <Link class="nav-link" href={`/${sucursal}/BolsaDeTrabajo`}>BOLSA DE TRABAJO</Link>
+                          <Link class="nav-link " href={`/${sucursal}/QuienesSomos`}>QUIENES SOMOS</Link>
                         </NavMenu>
                       </li>
+
                   </ul>
               </div>
           </div>

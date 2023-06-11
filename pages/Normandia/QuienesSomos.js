@@ -1,16 +1,13 @@
 import React from 'react'
-import { PageProvider } from '../../context/PageProvider'
 import Layout from '../../components/layout/Layout'
 import { PageLayout } from '../../components/layout/PageLayout'
 
 export default function NormandiaQuienesSomos(){
   return (
     <>
-      <PageProvider>
-        <Layout Sucursal = {'DelCampo'}> 
+        <Layout Sucursal = {'Normandia'}> 
           <PageLayout/>
         </Layout>
-      </PageProvider>
     </>
   )
 }
