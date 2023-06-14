@@ -11,7 +11,6 @@ export const InicioLayout = () => {
         <Carrusel/>
       </div>
       <Ubicaciones/>
-      <Footer/>
     </>
   )
 }

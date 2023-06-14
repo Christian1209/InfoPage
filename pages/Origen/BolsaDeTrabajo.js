@@ -7,6 +7,7 @@ export default function OrigenBolsa(){
     <>
         <Layout Sucursal = {'Origen'}> 
           <PageLayout/>
+          <h1>Bolsa</h1>
         </Layout>
     </>
   )

@@ -1,23 +1,28 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useContext } from 'react'
 import { Card, ListGroup } from 'react-bootstrap';
 import { formatearDinero } from '../../helpers/formatearDinero';
+import Link from 'next/link';
+import { PageContext } from '../../context/PageContext';
 
 export const Producto = ({producto}) => {
 //        src = {`/assets/productos/${imagen}.jpg`} 
-  const {nombre, imagen, precio} = producto;
-  console.log('Fui llamado soy producto');
-  console.log(imagen);
+  const {id, nombre, imagen, precio} = producto;
+  const {sucursal} = useContext(PageContext);
+
+
   return (
-    <Card style={{ width: '18rem', height:'25rem' }}>
+
+    <Card className='position-relative' style={{ width: '18rem', height:'25rem' }}>
       <Card.Img variant="top" width={200} height={200} src={`/assets/productos/${imagen}.jpg`}/>
       <Card.Body>
-          <p className='mt-2 fw-bold fs-3'>
+          <p className='mt-2 fw-bold fs-3 text-center'>
             {nombre}
           </p>
-          <p className=' fs-2 fw-bold' style={{ color: '#105b72c2'}}> 
+          <Link href={`productos/[id]`} as={`productos/${id}`} className='text-center fs-2 fw-bold stretched-link px-5' style={{ color: '#105b72c2'}}> 
                 {formatearDinero(precio) + ' kg'}
-          </p>
+          </Link>
+
       </Card.Body>
     </Card>
   )

@@ -9,7 +9,7 @@ export default function NormandiaProductos(){
     <>
         <Layout Sucursal = {'Normandia'}> 
           <PageLayout/>
-          <div className='d-flex'>
+          <div className='d-flex w-100'>
             <SidebarProductos/>
             <ProductosGrid/>
           </div>

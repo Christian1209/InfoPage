@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Header } from '../ui/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { PageContext } from '../../context/PageContext';
+import Footer from '../ui/Footer';
 
 export const Layout = props => {
   const {sucursal, setSucursal} = useContext(PageContext);
@@ -21,6 +22,7 @@ export const Layout = props => {
         <h1>
             {props.Sucursal}
         </h1>
+        <Footer/>
     </>
 
   );
