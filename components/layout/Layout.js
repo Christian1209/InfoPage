@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Link from 'next/link'
 import { Header } from '../ui/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,6 +10,7 @@ export const Layout = props => {
   setSucursal(props.Sucursal);
 
 
+
   return (
 
     
@@ -19,9 +20,6 @@ export const Layout = props => {
         <main>
             {props.children}
         </main>
-        <h1>
-            {props.Sucursal}
-        </h1>
         <Footer/>
     </>
 

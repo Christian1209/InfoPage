@@ -18,10 +18,10 @@ export const Navegacion2 = () => {
 
   return (
     <>
-      <nav class="navbar navbar-expand-md pt-0 ">
-          <div class="container-fluid border bg-success">
+      <nav class="navbar navbar-expand-md pt-0  navbar-light bg-light">
+          <div class="container-fluid border ">
               <div class="collapse navbar-collapse px-5"  id = "menu"  >
-                  <ul class="navbar-nav me-auto fs-6 fw-bold px-3">
+                  <ul class="navbar-nav me-auto fs-4 fw-bold px-3">
                       <li class="nav-item px-3">
                         <NavMenu>
                           <Link class="nav-link" href={`/${sucursal}/`}>INICIO</Link>
@@ -35,6 +35,11 @@ export const Navegacion2 = () => {
                       <li class="nav-item px-3">
                         <NavMenu>
                           <Link class="nav-link" href={`/${sucursal}/BolsaDeTrabajo`}>BOLSA DE TRABAJO</Link>
+                        </NavMenu>
+                      </li>
+                      <li class="nav-item px-3">
+                        <NavMenu>
+                          <Link class="nav-link " href={`/${sucursal}/QuienesSomos`}>CONTACTO</Link>
                         </NavMenu>
                       </li>
                       <li class="nav-item px-3">

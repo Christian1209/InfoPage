@@ -11,9 +11,11 @@ const NavMenu = styled.div`
     }
 `;
 
+//style={{ backgroundImage:`url(/assets/img/bgCortes.jpg)`}}
+
 export const Navegacion = () => {
   return (
-    <nav class="navbar navbar-expand-lg pb-0 mb-0" style={{ backgroundImage:`url(/assets/img/bgCortes.jpg)`}} >
+    <nav class="navbar navbar-expand-lg pb-0 mb-0 lg navbar-dark bg-dark"  >
         <div class="container-fluid  mt-3 pb-3 ">
             <div class= "px-5 img-fluid" > 
                 <img 
@@ -26,7 +28,7 @@ export const Navegacion = () => {
             </button>
             
             <div class="collapse navbar-collapse pl-5"  id = "menu"  >
-                <ul class="navbar-nav me-auto fs-3 fw-bold  ">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 fs-2 fw-bold  ">
                     <li class="nav-item px-3">
                         <NavMenu>
                             <Link class="nav-link" href='/'>Grupo ICEA</Link>

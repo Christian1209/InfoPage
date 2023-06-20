@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 const size = {
   mobile: "320px",
-  tablet: "768px",
+  tablet: "1500px",
   laptop: "3500px",
   desktop: "7060px",
 }
@@ -43,7 +43,7 @@ const CarruselContainer = styled.div`
    `)};
 
    ${laptop(css`
-   width: 50%;
+   width: 60%;
    margin-top: 1%;
    `)};
 
@@ -56,7 +56,7 @@ const CarruselContainer = styled.div`
 
 function Carrusel() {
   return (
-    <CarruselContainer>
+    <CarruselContainer >
       <Carousel variant="dark">
         <Carousel.Item>  
             <img
