@@ -25,3 +25,17 @@ model Categoria{
   icono String 
   productos Producto[]
 }
+
+model VacantesNormandia{
+  id Int @id @default(autoincrement())
+  publicacion DateTime @default(now())
+  titulo String 
+  area String
+  turno String
+  horario String
+  ubicacion String 
+  descripcion String 
+  requisitos String
+  sueldo String
+} 
+

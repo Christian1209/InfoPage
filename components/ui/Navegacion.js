@@ -16,7 +16,7 @@ const NavMenu = styled.div`
 export const Navegacion = () => {
   return (
     <nav class="navbar navbar-expand-lg pb-0 mb-0 lg navbar-dark bg-dark"  >
-        <div class="container-fluid  mt-3 pb-3 ">
+        <div class="container-fluid pb-3 ">
             <div class= "px-5 img-fluid" > 
                 <img 
                 src="/assets/img/assets.jpg"

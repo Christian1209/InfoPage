@@ -8,19 +8,21 @@ export const Sugerencias = ({productosDiferentes}) => {
     console.log(productosDiferentes);
 
   return (
-    <Row >
-        <Col>
-            <Producto producto={ productosDiferentes[0] }/>
-        </Col>
-        <Col>
-            <Producto producto={ productosDiferentes[0] }/>
-        </Col>
-        <Col>
-            <Producto producto={ productosDiferentes[0] }/>
-        </Col>
-        <Col>
-            <Producto producto={ productosDiferentes[0] }/>
-        </Col>
-    </Row>
+    <div className='d-flex justify-content-center w-100'>
+        <Row >
+            <Col>
+                <Producto producto={ productosDiferentes[0] }/>
+            </Col>
+            <Col>
+                <Producto producto={ productosDiferentes[0] }/>
+            </Col>
+            <Col>
+                <Producto producto={ productosDiferentes[0] }/>
+            </Col>
+            <Col>
+                <Producto producto={ productosDiferentes[0] }/>
+            </Col>
+        </Row>
+    </div>
   )
 }

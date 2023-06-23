@@ -7,7 +7,7 @@ const Footer = () => <footer className="page-footer font-small blue pt-5">
                 <h5 className="text-uppercase">SERVICIO A DOMICILIO EN TODAS LAS SUCURSALES</h5>
             </div>
 
-            <hr className="clearfix w-100 d-md-none pb-0"/>
+            <hr className=" w-100 d-md-none pb-0"/>
 
             <div className="col-md-3 mb-md-0 mb-3">
                 <h5 className="text-uppercase">Sucursales</h5>

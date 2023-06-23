@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React, { useContext } from 'react'
-import { Card, ListGroup } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { formatearDinero } from '../../helpers/formatearDinero';
 import Link from 'next/link';
 import { PageContext } from '../../context/PageContext';

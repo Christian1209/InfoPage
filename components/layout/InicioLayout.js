@@ -11,7 +11,7 @@ export const InicioLayout = () => {
     <>
       <HeroSection/>
       <IconSection/>
-      <p className='d-flex justify-content-center w-100 display-3 mt-5 fw-bold' >
+      <p className='d-flex justify-content-center w-100 display-3 fw-bold' >
         Nuestras Sucursales
       </p>
       <div className='d-flex justify-content-center w-100'>
