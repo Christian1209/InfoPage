@@ -1,34 +1,9 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import Carousel from 'react-bootstrap/Carousel';
+import { desktop, laptop, mobile, tablet } from '../../helpers/mediaQuerys';
 
-const size = {
-  mobile: "320px",
-  tablet: "1500px",
-  laptop: "3500px",
-  desktop: "7060px",
-}
-export const mobile = (inner) => css`
-  @media (max-width: ${size.mobile}) {
-    ${inner};
-  }
-`;
-export const tablet= (inner) => css`
-  @media (max-width: ${size.tablet})and (min-width:${size.mobile}) {
-    ${inner};
-  }
-`;
-export const laptop= (inner) => css`
-  @media (max-width: ${size.laptop}) and (min-width:${size.tablet}) {
-    ${inner};
-  }
-`;
 
-export const desktop= (inner) => css`
-  @media (max-width: ${size.desktop}) and (min-width:${size.laptop}) {
-    ${inner};
-  }
-`;
 
 const CarruselContainer = styled.div`
 
@@ -43,12 +18,12 @@ const CarruselContainer = styled.div`
    `)};
 
    ${laptop(css`
-   width: 60%;
+   width: 70%;
    margin-top: 1%;
    `)};
 
    ${desktop(css`
-   width: 40%;
+   width: 70%;
    margin-top: 1%;
    `)};
 `;

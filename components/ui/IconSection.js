@@ -4,7 +4,7 @@ import { Col, Row } from 'react-bootstrap'
 
 export const IconSection = () => {
   return (
-    <div className='d-flex justify-content-center ' style={{ marginBottom: '5%'}}>
+    <div className='d-flex justify-content-center bg-light ' style={{ marginBottom: '5%'}}>
         <section className='new'>
             <Row>
             <Col>

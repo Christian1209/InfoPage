@@ -5,26 +5,51 @@ import Layout from '../../../components/layout/Layout';
 import { PageLayout } from '../../../components/layout/PageLayout';
 import Image from 'next/image';
 import { ProductoAmpliado } from '../../../components/ui/ProductoAmpliado';
+import { Sugerencias } from '../../../components/ui/Sugerencias';
 
 export default function ProductoPage(){
  
    const {categorias} = useContext(PageContext);
+   const [reload, setReload] = useState(0);
    const [producto, setProducto] = useState({})
+   const [productosDiferentes, setProductosDiferentes] = useState({})
+
     //Routing para obteener el id actual.
     const router = useRouter();
-    const {query:{id}} = router;
+
+
+
+
     useEffect(() => {
-      if(id){
+      console.log('Router');
+      console.log(router);
+
+      if(!router.isReady)
+        return;
+
+      if(router.isReady){
+        const {query:{id}} = router;
         for(var i = 0; i < categorias.length; i++){
-          const categoria = categorias[i].productos.filter(producto => producto.id === parseInt(id));
-          if(categoria.length > 0)
-            setProducto(categoria[0]);
+          const producto = categorias[i].productos.filter(producto => producto.id == id);
+          if(producto.length > 0){
+            setProducto(producto[0]);
+            
+            const productosDiferentesArray = categorias[i].productos.filter(producto => producto.id != id);
+            setProductosDiferentes(productosDiferentesArray);
+
+          }
         }
 
       }
 
-    }, [id])
+    }, [router.isReady, categorias])
 
+    
+
+    
+    if (producto.nombre === undefined) {
+      return <>Still loading...</>;
+    }
 
   return (
     <>
@@ -32,6 +57,13 @@ export default function ProductoPage(){
           <PageLayout/>
             <div className='d-flex justify-content-center w-100'>
               <ProductoAmpliado  imagen = {producto?.imagen} nombre = {producto?.nombre}  precio = {producto?.precio}/>
+            </div>
+            <p className='display-5 fw-bold text-center'>
+                Quizá te interesen...
+              </p>
+            <div className='d-flex justify-content-center w-100'>
+
+              <Sugerencias productosDiferentes = {productosDiferentes} />
             </div>
         </Layout>
     </>

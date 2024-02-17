@@ -30,12 +30,18 @@ model VacantesNormandia{
   id Int @id @default(autoincrement())
   publicacion DateTime @default(now())
   titulo String 
+  icono Int 
   area String
   turno String
   horario String
   ubicacion String 
   descripcion String 
-  requisitos String
+  requisito1 String
+  requisito2 String
+  requisito3 String
+  requisito4 String
+  requisito5 String
   sueldo String
+  status Boolean
 } 
 

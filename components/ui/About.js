@@ -1,5 +1,29 @@
+import styled from '@emotion/styled';
 import React from 'react'
 import { Image } from 'react-bootstrap'
+import { desktop, laptop, mobile, tablet } from '../../helpers/mediaQuerys';
+import { css } from '@emotion/react';
+
+const Content = styled.p`
+  padding: 0 2rem ;
+  ${mobile(css` 
+    font-size: 1.1rem;
+    padding: 0 .3rem ;
+  `)};
+
+  ${tablet(css`
+  font-size: 1.2rem;
+  `)};
+
+  ${laptop(css`
+  font-size: 1.2rem;
+  `)};
+
+  ${desktop(css`
+    font-size: 1.4rem;
+  `)};
+`;
+
 
 export const About = () => {
   return (
@@ -17,15 +41,16 @@ export const About = () => {
                         />
                         </div>
                     </div>
-                    <div className='col-12 col-lg-6 py-5'>
-                        <h2 className='fs-1 text-muted  border-start  my-4 px-3 border-dark'>
+                    <div className='col-12 col-lg-6 '>
+                        <h2 className='fs-1 text-muted  border-start  px-3 border-dark pt-3'>
                             CONOCE MAS DE NOSOTROS
                         </h2>
-                        <div className='mb-2'></div>
-                        <div className='col-12 col-md-4 mb-2 mb-md-0 w-75'>
+                         <div className='mb-2'></div>
+                        <div className='col-12 col-md-4 mb-2 mb-md-0 w-100'>
                             <div>
-                                <h4 className=' mx-3 w-100'>SOMOS UNA EMPRESA BLABNLKA BLA BLA BLA BLA BLA  BLA BLA BLA BLA bla bla bla bla blaBLA BLA BLA BLA BLA  BLA BLA BLA BLA  </h4>
-
+                                <Content className=' mx-3 w-100 pb-5'>
+"¡Bienvenidos a la familia de Grupo ICEA! Nos enorgullecemos de ser tu destino confiable para la mejor selección de carne en todas nuestras sucursales. Con 7 sucursales ubicadas en Jalisco, estamos comprometidos en ofrecerte cortes frescos y de calidad superior en cada visita. Nuestro equipo de expertos carniceros se esfuerza por brindarte atención personalizada y asesoramiento en la elección y preparación de la carne perfecta para cada ocasión.   
+                                </Content>
                             </div>
                         </div>
                     </div>

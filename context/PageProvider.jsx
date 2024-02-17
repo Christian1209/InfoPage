@@ -9,14 +9,26 @@ export const PageProvider = ({children}) => {
   const [sucursal, setSucursal] = useState('');
   const [categorias, setCategorias] = useState([]);
   const [categoriaActual, setCategoriaActual] = useState({})
+  const [nav1Actual, setNav1Actual] = useState(1);
+  const [nav2Actual, setNav2Actual] = useState(1);
+  const [vacantes, setVacantes] = useState({})
 
   const obtenerCategorias = async () => {
     const {data} = await axios('/api/categorias');
     setCategorias(data);
   } 
 
+  const obtenerVacantes = async () => {
+    const {data} = await axios('/api/vacantes');
+    setVacantes(data);
+  } 
+
   useEffect(()=>{
     obtenerCategorias()
+  }, [])
+
+  useEffect(()=>{
+    obtenerVacantes()
   }, [])
 
   useEffect(()=>{
@@ -31,7 +43,7 @@ export const PageProvider = ({children}) => {
 
 
   return (
-    <PageContext.Provider value = {{sucursal,setSucursal,categorias,handleClickCategoria, categoriaActual}}>
+    <PageContext.Provider value = {{sucursal,setSucursal,categorias,handleClickCategoria, categoriaActual, vacantes, nav1Actual, setNav1Actual, nav2Actual, setNav2Actual}}>
         {children}
     </PageContext.Provider>
 

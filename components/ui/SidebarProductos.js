@@ -8,7 +8,7 @@ export const SidebarProductos = () => {
 
   return (
     <>
-      <nav className='mt-10 w-25' >
+      <nav >
         {categorias.map(categoria => (
           <Categoria
             key = {categoria.id}

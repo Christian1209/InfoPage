@@ -1,16 +1,12 @@
 import { PrismaClient } from '@prisma/client'
-import { categorias } from './Data/categorias'
-import { productos } from './Data/productos'
+import { vacantes } from './Data/vacantes'
 
 const prisma = new PrismaClient()
 
 const main = async():Promise<void> => {
     try{
-        await prisma.categoria.createMany({
-            data:categorias
-        })
-        await prisma.producto.createMany({
-            data:productos
+        await prisma.vacantesNormandia.createMany({
+            data:vacantes
         })
     }
     catch{

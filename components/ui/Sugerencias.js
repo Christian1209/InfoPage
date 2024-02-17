@@ -4,15 +4,13 @@ import { Col, Row } from 'react-bootstrap'
 import { Producto } from './Producto'
 
 export const Sugerencias = ({productosDiferentes}) => {
-    console.log('recibi el parametro de productos diferentes')
-    console.log(productosDiferentes);
 
   return (
-    <div className='d-flex justify-content-center w-100'>
+    <div className='d-flex justify-content-center w-100 mb-5'>
         <Row >
-            <Col>
+            <Col >
                 <Producto producto={ productosDiferentes[0] }/>
-            </Col>
+            </Col >
             <Col>
                 <Producto producto={ productosDiferentes[0] }/>
             </Col>

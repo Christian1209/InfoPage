@@ -3,8 +3,13 @@ import { Card, Container, Row, Col, Button } from 'react-bootstrap';
 import { HiLocationMarker } from "react-icons/hi";
 import { RiKnifeLine } from "react-icons/ri";
 import { CiClock1, CiShop } from "react-icons/ci";
+import Link from 'next/link';
+import { TransformaIcono } from '../../helpers/TransformaIcono';
 
-const CardVacante = () => {
+const CardVacante = ({vacante}) => {
+
+  const {id, area, turno, ubicacion,  titulo} = vacante;
+  
   return (
     <Container>
       <Row>
@@ -14,14 +19,14 @@ const CardVacante = () => {
               <Row>
                 <Col xs={2}>
                   <div className="px-2">
-                    <RiKnifeLine size={35} /> {/* Utiliza el componente HiLocationMarker */}
+                    <TransformaIcono numero = {vacante.icono} ampliada= {false}/> {/* Utiliza el componente HiLocationMarker */}
 
                   </div>
                 </Col>
                 <Col xs={10} className="text-end">
-                  <p >22/06/2023</p> {/* Reemplaza "Fecha" por la fecha que deseas mostrar */}
+                  <p >{vacante.publicacion.slice(0,10)}</p> {/* Reemplaza "Fecha" por la fecha que deseas mostrar */}
                 </Col>
-                <h5 className='mt-4 fs-5 fw-bold mb-0' style={{ color: '#D4AF37'}}>Tablajero Para Mostrador</h5> {/* Reemplaza "Título" por el título de la card */}
+                <h5 className='mt-4 fs-5 fw-bold mb-0' style={{ color: '#D4AF37'}}>{titulo}</h5> {/* Reemplaza "Título" por el título de la card */}
               </Row>
               <hr />
               <Row>
@@ -37,7 +42,7 @@ const CardVacante = () => {
                           <CiShop size={24} /> {/* Utiliza el componente HiLocationMarker */}
                         </span>
                         <p className='fs-6 mt-3 'style={{ marginLeft: '3%'}}>
-                          AREA: Cremería {/* Reemplaza "Componente 1" por el texto del primer componente */}
+                          AREA: {area} {/* Reemplaza "Componente 1" por el texto del primer componente */}
                         </p>
                       </div>
                     </li>
@@ -47,7 +52,7 @@ const CardVacante = () => {
                           <CiClock1 size={24} /> {/* Utiliza el componente HiLocationMarker */}
                         </span>
                         <p className='fs-6 mt-3 'style={{ marginLeft: '3%'}}>
-                          TURNO: Matutino {/* Reemplaza "Componente 1" por el texto del primer componente */}
+                          TURNO: {turno} {/* Reemplaza "Componente 1" por el texto del primer componente */}
                         </p>
                       </div>
                     </li>
@@ -57,12 +62,12 @@ const CardVacante = () => {
                           <HiLocationMarker size={24} /> {/* Utiliza el componente HiLocationMarker */}
                         </span>
                         <p className='fs-6 mt-3 'style={{ marginLeft: '3%'}}>
-                          AV.PRESA OSORIO 3212 {/* Reemplaza "Componente 1" por el texto del primer componente */}
+                          {ubicacion} {/* Reemplaza "Componente 1" por el texto del primer componente */}
                         </p>
                       </div>
                     </li>
-                    <div className='text-end'>
-                      <Button variant="outline-warning" className=''>Ver mas...</Button>{' '}
+                    <div className='text-end' >
+                      <Link className='btn btn-outline-warning '  href={`bolsaDeTrabajo/[id]`} as={`bolsaDeTrabajo/${id}`}   >Ver mas...</Link>{' '}
                     </div>
                   </ul>
                 </Col>
