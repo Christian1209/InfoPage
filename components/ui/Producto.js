@@ -65,7 +65,7 @@ export const Producto = ({producto}) => {
   const {sucursal} = useContext(PageContext);
 
 
-
+  console.log(imagen)
   return (
     <CardStyle className='mt-4 '>
       <Card className='position-relative border-dark  card-hover card-size' >
