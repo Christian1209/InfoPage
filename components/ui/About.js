@@ -43,7 +43,7 @@ export const About = () => {
                     </div>
                     <div className='col-12 col-lg-6 '>
                         <h2 className='fs-1 text-muted  border-start  px-3 border-dark pt-3'>
-                            CONOCE MAS DE NOSOTROS
+                            CONOCE MAS DE NOSOTROS.
                         </h2>
                          <div className='mb-2'></div>
                         <div className='col-12 col-md-4 mb-2 mb-md-0 w-100'>
